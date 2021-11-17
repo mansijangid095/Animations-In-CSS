@@ -1,0 +1,134 @@
+body{
+    background-color: rgb(111, 101, 167);
+   
+    background-size: cover;
+    height: 300px;
+    
+}
+.roadcontainer{
+    background-color: red;
+    background-image: url(b3.png);
+    background-repeat: repeat-x;
+    background-size:covor;
+    display: block;
+    width: 500%;
+    height: 150px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+    position: absolute;
+    z-index: 1;
+}
+.treecontainer{
+
+    background-image: url(bg1.png);
+    
+    position: absolute;
+    background-repeat: repeat-x;
+    display: block;
+    width: 500%;
+    height: 600px;
+    margin: 0px;
+    left: 0px;
+    right: 0;
+    top: 0px;
+    padding: 0px;
+}
+.trees{
+    background-image: url(btree.png);
+    position:absolute;
+    width: 500%;
+    background-repeat: repeat-x;
+    height: 600px;
+    display: block;
+    background-size:contain;
+    right:0px;
+    top:0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.car{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+.lwheels{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50%);
+    left:515px;
+    bottom: 59px;
+}
+.lwheels img{
+    width: 92px;
+    height:107px;
+    animation: wheels .1s linear infinite;
+}
+.rwheels{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50%);
+    left:825px;
+    bottom: 59px;
+}
+.rwheels img{
+    width: 92px;
+    height:107px;
+    animation: wheels .1s linear infinite;
+}
+.treecontainer{
+    animation: treecontainer 1s linear;
+}
+.roadcontainer{
+    animation: roadcontainer 3s linear infinite ;
+    animation-direction: reverse;
+}
+.trees{
+    animation: trees 2s linear infinite;
+}
+
+@keyframes treecontainer{
+    0%{
+    left:0px;
+    }
+    100%{
+        left: 100px;
+    }
+}
+@keyframes roadcontainer {
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+@keyframes trees {
+    100%{
+        transform: translateX(-3400px);
+    }
+    
+}
+@keyframes car {
+    100%{
+        transform: translateX(-1px);
+        transform: translateY(-1px);
+    }
+    
+}
+@keyframes wheels {
+    100%{
+        transform: rotate(360deg);
+    }
+}
